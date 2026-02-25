@@ -19,9 +19,9 @@ jobs:
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
-          apiToken: ${{ kcQnFSQgcISWT5wwlCUq9_f9O-lq7sv4vBw73ayN
+          apiToken: ${{ secrets.kcQnFSQgcISWT5wwlCUq9_f9O-lq7sv4vBw73ayN
  }}
-          accountId: ${{ 047c6e8f0cdad9f9ae622bd73de3bf30
+          accountId: ${{ secrets.047c6e8f0cdad9f9ae622bd73de3bf30
 
  }}
           projectName: my-website
