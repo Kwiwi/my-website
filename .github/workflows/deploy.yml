@@ -3,7 +3,7 @@ name: Deploy to Cloudflare Pages
 on:
   push:
     branches:
-      - master  # 当推送到 main 分支时触发
+      - master
 
 jobs:
   deploy:
@@ -19,12 +19,8 @@ jobs:
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
-          apiToken: ${{ secrets.kcQnFSQgcISWT5wwlCUq9_f9O-lq7sv4vBw73ayN
- }}
-          accountId: ${{ secrets.047c6e8f0cdad9f9ae622bd73de3bf30
-
- }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: my-website
           directory: .
-          # Optional: Enable this if you want to have GitHub Deployments triggered
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
